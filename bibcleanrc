@@ -1,0 +1,192 @@
+%%% -*-text-*-
+%%% ====================================================================
+%%%  BibTeX-initialization-file{
+%%%     author          = "Nelson H. F. Beebe",
+%%%     version         = "2.06.02",
+%%%     date            = "29 January 1993",
+%%%     time            = "14:15:44 MST",
+%%%     filename        = "bibclean.ini",
+%%%     address         = "Center for Scientific Computing
+%%%                        Department of Mathematics
+%%%                        University of Utah
+%%%                        Salt Lake City, UT 84112
+%%%                        USA",
+%%%     telephone       = "+1 801 581 5254",
+%%%     FAX             = "+1 801 581 4148",
+%%%     checksum        = "61631 181 1106 7267",
+%%%     email           = "beebe@math.utah.edu (Internet)",
+%%%     codetable       = "ISO/ASCII",
+%%%     keywords        = "prettyprint, bibliography",
+%%%     supported       = "yes",
+%%%     docstring       = "This file contains bibclean value pattern
+%%%                        matching specifications and possibly,
+%%%                        default options, to be read during
+%%%                        initialization.
+%%%
+%%%                        Each pattern group starts with an empty
+%%%                        string assignment to clear out old patterns
+%%%                        and guarantee a uniform start.  For speed,
+%%%                        patterns should be ordered with more likely
+%%%                        matches near the beginning of the lists.
+%%%
+%%%                        Typical matches are shown in comments
+%%%                        following each pattern.  A few patterns are
+%%%                        accompanied by warning messages that will
+%%%                        be issued if the pattern is matched.
+%%%
+%%%                        If you augment patterns in file, please
+%%%                        make them more precise, rather than looser.
+%%%                        Generally, you should add new patterns,
+%%%                        rather than modify existing ones.  The goal
+%%%                        is to expose possible errors in .bib files,
+%%%                        not mask them.
+%%%
+%%%                        The checksum field above contains a CRC-16
+%%%                        checksum as the first value, followed by the
+%%%                        equivalent of the standard UNIX wc (word
+%%%                        count) utility output of lines, words, and
+%%%                        characters.  This is produced by Robert
+%%%                        Solovay's checksum utility.",
+%%%  }
+%%% ====================================================================
+
+bibdate =	"\"aaa aaa d dd:dd:dd 19dd\""  %% "Mon Dec 7 18:26:51 1992"
+bibdate =	"\"aaa aaa dd dd:dd:dd 19dd\"" %% "Mon Dec 21 18:26:51 1992"
+bibdate =	"\"aaa aaa d dd:dd:dd 20dd\""  %% "Mon Dec 3 18:26:51 2001"
+bibdate =	"\"aaa aaa dd dd:dd:dd 20dd\"" %% "Mon Dec 17 18:26:51 2001"
+
+chapter =	""			%% discard old patterns
+chapter	=	"\"D\""			%% "23"
+chapter	=	"\"D-D\""		%% "11-2"
+
+month	=	""			%% discard old patterns
+month	=	"aaa"			%% oct
+month	=	"aaa # \" D\""		%% oct # " 10"
+month	=	"aaa # \" D--D\""	%% oct # " 20--24"
+month	=	"\"D \" # aaa"		%% "10 " # oct
+month	=	"\"D--D \" # aaa"	%% "10--24 " # oct
+month	=	"aaa # \"\" # aaa"	%% jul # "\emdash " # aug
+month	=	"aaa # \"--\" # aaa"	%% jul # "--" # aug
+month	=	"aaa # \" -- \" # aaa"	%% jul # " -- " # aug
+month	=	"aaa # \"/\" # aaa"	%% jul # "/" # aug
+month	=	"aaa # \" A \" # aaa"	%% jul # " and " # aug
+
+number	=	""			%% discard old patterns
+number	=	"\"D\""			%% "23"
+number	=	"\"A AD\""		%% "PN LPS5001"
+number	=	"\"A D(D)\""		%% "RJ 34(49)"
+number	=	"\"A D\""		%% "XNSS 288811"
+number	=	"\"A D\\.D\""		%% "Version 3.20"
+number	=	"\"A-A-D-D\""		%% "UMIAC-TR-89-11"
+number	=	"\"A-A-D\""		%% "CS-TR-2189"
+number	=	"\"A-A-D\\.D\""		%% "CS-TR-21.7"
+number	=	"\"A-AD-D\""		%% "TN-K\slash 27-70"
+number	=	"\"A-D D\""		%% "PB-251 845"
+number	=	"\"A-D-D\""		%% "ANL-30-74"
+number	=	"\"A-D\""		%% "TR-2189"
+number	=	"\"AD-D-D\""		%% "GG24-3611-00"
+number	=	"\"AD-D\""		%% "SP43-29"
+number	=	"\"AD\""		%% "LPS0064"
+number	=	"\"A\\#D-D\""		%% "TR\#89-24 ????"
+number	=	"\"D \\an\\d D\""	%% "11 and 12"
+number	=	"\"D+D\""		%% "3+4"
+number	=	"\"D+D\""		%% "3+4"
+number	=	"\"D-D\""		%% "23-27"
+number	=	"\"D/D\""		%% "23/27"
+number	=	"\"D  D\""		%% "23 \& 24"
+number	=	"\"DA\""		%% "23A"
+number	=	"\"D\\.D\""		%% "3.4"
+number	=	"\"W-W W\""		%% "AERE-R 12329"
+number	=	"\"W-W-WW-W\""		%% "OSU-CISRC-4\slash 87-TR9"
+number	=	"\"W\""			%% "Computer Science Report 100"
+number	=	"\"X\""			%% "TR/AB/3-43.7-3/AB"
+
+pages	=	""			%% discard old patterns
+pages	=	"\"D\""			%% "23"
+pages	=	"\"aD\""		%% "L23"
+pages	=	"\"D--D\""		%% "23--27"
+pages	=	"\"aD--aD\""		%% "L23--L27"
+pages	=	"\"D, D\""		%% "23, 27"
+pages	=	"\"aD, aD\""		%% "L23, L27"
+pages	=	"\"D, D, D\""		%% "23, 27, 45"
+pages	=	"\"aD, aD, aD\""	%% "L23, L27, L45"
+pages	=	"\"D, D, D, D\""	%% "23, 27, 45, 98"
+pages	=	"\"aD, aD, aD, aD\""	%% "L23, L27, L45, L98"
+pages	=	"\"R + D\""		%% "viii + 445"
+pages	=	"\"R + D, w D w\""	%% "viii + 445, with 30 illustrations"
+pages	=	"\"D, w D w\""		%% "239, with 27 illustrations"
+pages	=	"\"D--D, D--D\""	%% "23--27, 29--32"
+pages	=	"\"D--D, D--D, D--D\""	%% "23--27, 29--32, 35--37"
+pages	=	"\"aD--aD, aD--aD\""	%% "L23--L27, L29--L32"
+pages	=	"\"aD--aD, aD--aD, aD--aD\""
+					%% "L23--L27, L29--L32, L35--L37"
+
+
+price	=	""			%% discard old patterns
+price	=	"\"AD\\.dd\""		%% "US\$12.95" and "DM30.50"
+price	=	"\"D\\.dd\""	"Put country prefix on price %v"
+					%% "$12.95" and "\pounds 12.95"
+price	=	"\"AD\""		%% "US\$13" and "FF70"
+price	=	"\"D\""		"Put country prefix on price %v"
+					%% "$13" and "\pounds 13"
+
+tag	=	""			%% discard old patterns
+tag	=	"A:Add"			%% Knuth:TB89
+tag	=	"A:Adda"		%% Knuth:TB89a
+
+volume	=	""			%% discard old patterns
+volume	=	"\"D\""			%% "27"
+volume	=	"\"DA\""		%% "27A"
+volume	=	"\"D/D\""		%% "27/3"
+volume	=	"\"DA D\""		%% "27A 3"
+volume	=	"\"w-D\""		%% "SMC-13"
+volume	=	"\"A\""			%% "VIII"
+volume	=	"\"D.D\""		%% "1.2"
+volume	=	"\"D \\an\\d D\""	%% "11 and 12"
+volume	=	"\"W\""			%% "Special issue A"
+
+year	=	""			%% discard old patterns
+year	=	"\"20dd\""		%% "2092"
+year	=	"\"20dd, 20dd\""	%% "2089, 2090"
+year	=	"\"20dd, 20dd, 20dd\""	%% "2089, 2090, 2091"
+year	=	"\"20dda20dd\""		%% "{\noopsort{2085a}}2085"
+year	=	"\"19dd\""		%% "1992"
+year	=	"\"19dd, 19dd\""	%% "1989, 1990"
+year	=	"\"19dd, 19dd, 19dd\""	%% "1989, 1990, 1991"
+year	=	"\"19dda19dd\""		%% "{\noopsort{1985a}}1985"
+year	=	"\"18dd\""		%% "1892"
+year	=	"\"18dd, 18dd\""	%% "1889, 1890"
+year	=	"\"18dd, 18dd, 18dd\""	%% "1889, 1890, 1891"
+year	=	"\"18dda18dd\""		%% "{\noopsort{1885a}}1885"
+year	=	"\"19dd (19dd)\""	%% "1989 (1990)" (e.g. translation of a
+					%% foreign journal, where the second
+					%% year is that of the translation)
+year	=	"\"18dd (18dd)\""	%% 
+year	=	"\"20dd (20dd)\""	%% 
+year	=	"\"18dd\" # \"--\""	%% "1889" # "\unskip--"
+year	=	"\"19dd\" # \"--\""	%% "1989" # "\unskip--"
+year	=	"\"20dd\" # \"--\""	%% "2089" # "\unskip--"
+year	=	"\"20dd\""      	%% "2009" (allow for a bit of growth!)
+year	=	"\"18dd--d\""		%% "1891--2"
+year	=	"\"19dd--d\""		%% "1991--2"
+year	=	"\"20dd--d\""		%% "2001--2"
+
+-long-field abstract
+-long-field summary
+
+%% This is a test of option specifications
+
+%% -init-file /dev/null			%% recursive empty init file
+
+%% -fix-names				%% this is a comment
+
+%% -fix-initials			%% this is too
+
+%% This is for GNU Emacs file-specific customization:
+%% Local Variables:
+%% eval: (auto-fill-mode -1)
+%% comment-start: "%% "
+%% comment-start-skip: "%+ *"
+%% comment-end: ""
+%% comment-column: 40
+%% End:

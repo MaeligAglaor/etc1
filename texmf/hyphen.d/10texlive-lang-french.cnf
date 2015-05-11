@@ -1,0 +1,9 @@
+% 10texlive-lang-french.cnf
+% You can change/add entries to this file and changes will be preserved
+% over upgrades, even if you have removed the main package prior
+% (not if you purged it). You should leave the following pseudo comment
+% present in the file!
+% -_- DebPkgProvidedMaps -_-
+% 
+name=basque file=loadhyph-eu.tex patterns=hyph-eu.pat.txt lefthyphenmin=2 righthyphenmin=2 exceptions=
+name=french file=loadhyph-fr.tex patterns=hyph-fr.pat.txt lefthyphenmin=2 righthyphenmin=3 exceptions= synonyms=patois,francais

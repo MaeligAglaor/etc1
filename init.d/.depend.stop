@@ -1,0 +1,13 @@
+TARGETS = urandom virtualbox privoxy uuidd virtualbox-guest-utils minissdpd jetty apache2 exim4 speech-dispatcher irqbalance atd gdomap network-manager bluetooth alsa-utils saned cups-browsed gdm3 cups avahi-daemon sendsigs rsyslog umountnfs.sh rpcbind nfs-common hwclock.sh networking umountfs umountroot halt reboot
+avahi-daemon: saned cups-browsed
+sendsigs: virtualbox network-manager exim4 bluetooth speech-dispatcher avahi-daemon privoxy irqbalance saned uuidd atd virtualbox-guest-utils apache2 gdomap cups-browsed minissdpd jetty alsa-utils gdm3
+rsyslog: network-manager exim4 bluetooth speech-dispatcher avahi-daemon irqbalance saned atd apache2 gdomap sendsigs cups-browsed cups
+umountnfs.sh: virtualbox network-manager exim4 bluetooth speech-dispatcher avahi-daemon privoxy sendsigs irqbalance saned uuidd atd virtualbox-guest-utils apache2 gdomap rsyslog cups-browsed minissdpd jetty alsa-utils gdm3
+rpcbind: umountnfs.sh
+nfs-common: umountnfs.sh
+hwclock.sh: privoxy nfs-common uuidd atd rsyslog cups-browsed minissdpd
+networking: exim4 rpcbind privoxy apache2 umountnfs.sh cups-browsed minissdpd jetty
+umountfs: virtualbox network-manager exim4 bluetooth rpcbind hwclock.sh speech-dispatcher avahi-daemon privoxy irqbalance saned uuidd atd virtualbox-guest-utils apache2 networking gdomap umountnfs.sh cups-browsed minissdpd urandom jetty alsa-utils gdm3
+umountroot: umountfs
+halt: umountroot
+reboot: umountroot

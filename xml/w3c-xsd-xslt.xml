@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.0//EN"
+  "file:///usr/share/xml/schema/xml-core/catalog.dtd">
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+<delegateURI uriStartString="http://www.w3.org/1999/XSL/Transform" catalog="file:///usr/share/xml/xslt/catalog.xml"/>
+<delegateURI uriStartString="http://www.w3.org/2001/XInclude" catalog="file:///usr/share/xml/xslt/catalog.xml"/>
+</catalog>

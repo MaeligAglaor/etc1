@@ -1,0 +1,26 @@
+TARGETS = killprocs motd nfs-common virtualbox rsyslog privoxy uuidd virtualbox-guest-utils minissdpd jetty binfmt-support sudo apache2 dbus exim4 speech-dispatcher irqbalance atd gdomap rsync cron anacron ssh acpid ntp network-manager bluetooth avahi-daemon saned cups-browsed gdm3 cups bootlogs single rmnologin rc.local
+INTERACTIVE = apache2
+apache2: rsyslog
+dbus: rsyslog
+exim4: rsyslog
+speech-dispatcher: rsyslog
+irqbalance: rsyslog
+atd: rsyslog
+gdomap: rsyslog
+rsync: rsyslog
+cron: rsyslog
+anacron: rsyslog
+ssh: rsyslog
+acpid: rsyslog
+ntp: rsyslog
+network-manager: dbus rsyslog
+bluetooth: rsyslog dbus
+avahi-daemon: dbus rsyslog
+saned: rsyslog dbus
+cups-browsed: rsyslog
+gdm3: dbus network-manager acpid
+cups: rsyslog
+bootlogs: gdm3
+single: killprocs motd bootlogs
+rmnologin: sudo virtualbox network-manager dbus rsyslog exim4 bluetooth speech-dispatcher avahi-daemon privoxy irqbalance saned nfs-common uuidd atd virtualbox-guest-utils apache2 gdomap cups-browsed minissdpd jetty gdm3 motd bootlogs cups binfmt-support rsync cron anacron ssh acpid ntp
+rc.local: virtualbox network-manager dbus rsyslog exim4 bluetooth speech-dispatcher avahi-daemon privoxy irqbalance saned nfs-common uuidd atd virtualbox-guest-utils apache2 gdomap cups-browsed minissdpd jetty gdm3 motd bootlogs cups binfmt-support rsync cron anacron sudo ssh acpid ntp
